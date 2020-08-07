@@ -1,0 +1,33 @@
+<!-- views/pages/job-ads-list.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meine Bewebung</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/job-ads-list.css">
+    <script type="text/javascript" src="/public/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/public/js/job-ads-list.js"></script>
+</head>
+<body>
+<div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <% include ../partials/nav-mobile %>
+
+    <div class="container body-mobile">
+        <% jobAd.forEach(function(jobAd) { %>
+            <div class="job-ad">
+                <h5 class="card-title"><span>Bereich: </span><span class="font-weight-bold"><%=jobAd.tätigkeitsfeld %></span></h5>
+                <p class="card-text"><span>Beruf: </span><span class="font-weight-bold"><%=jobAd.berufsbezeichnung %></span></p>
+                <a href="/matching/5bsf46542" class="btn">Bewerber Suche</a>
+                <a href="/job-ad/4ax54tiu" class="btn float-right">Übersicht</a>
+            </div>
+        <% }); %>
+    </div>
+</div>
+</body>
+</html>

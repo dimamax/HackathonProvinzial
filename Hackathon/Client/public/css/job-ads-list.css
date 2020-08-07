@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    color: #606060;
+    background-color: #555;
+}
+
+.mobile-container {
+    margin: auto;
+    background-color: #555;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.body-mobile{
+    padding-left: 16px;
+    padding-top: 70px;
+    height: 100%;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnav a.icon {
+    float: right;
+}
+
+.clicked{
+    background-color: #686868;
+    color: white;
+}
+
+.topnav a:hover {
+    background-color: #686868;
+    color: white;
+}
+
+.active {
+    color: #686868;
+    height: 100%;
+}
+
+.job-ad{
+    color: white;
+    padding: 15px;
+    background-color: #686868;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #69a82f;
+    color: white;
+    width: 130px;
+    font-size: 14px;
+}
+
+.btn:hover{
+    color: #FFDD00;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}

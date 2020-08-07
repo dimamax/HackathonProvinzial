@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    color: #606060;
+    background-color: #555;
+}
+
+.mobile-container {
+    margin: auto;
+    background-color: #555;
+    border-radius: 10px;
+    height: 110%;
+    width: 100%;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.body-mobile{
+    padding-left: 16px;
+    padding-top: 70px;
+    height: 100%;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnav a.icon {
+    float: right;
+}
+
+.clicked{
+    background-color: #ddd;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: #606060;
+}
+
+.active {
+    color: white;
+    height: 100%;
+}
+
+.job-ad{
+    color: white;
+    padding: 15px;
+    background-color: #686868;
+}
+
+.btn {
+    background-color: #69a82f;
+    color: white;
+}
+
+#tags {
+    background-color: #FFDD00;
+   padding: 2px;
+}
+
+.badge {
+    background-color: rgba(255, 221, 0, 0.8);
+
+}
+
+.btn:hover{
+    color: white;
+}
+
+.col, .font-weight-bold {
+    color: #FFFFFF;
+}
+
+.list-group-item, .card-body {
+    background-color: #606060;
+}
+
+.matching{
+
+}

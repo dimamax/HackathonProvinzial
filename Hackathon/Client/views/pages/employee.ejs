@@ -1,0 +1,71 @@
+<!-- views/pages/employee.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meine Bewebung</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/employee.css">
+    <script type="text/javascript" src="/public/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/public/js/employee.js"></script>
+</head>
+<body>
+<div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <% include ../partials/nav-mobile %>
+
+    <div class="container body-mobile">
+        <nav class="justify-content-center">
+            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Offene Matches</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">In Bearbeitung</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Abgeschlossen</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <% matchedUsers.forEach(function(matchedUsers) { %>
+                <div class="row pagination-centered matches align-items-center">
+                    <div class="match-container col-6 text-center">
+                        <p class="card-title">
+                            <span>Einzigartige Kennung: </span>
+                            <span class="font-weight-bold"><%=matchedUsers.unId %></span></p>
+                        <p class="card-text">
+                            <span>Tätigkeitsfelder: </span>
+                            <span class="font-weight-bold tat"><%=matchedUsers.tätigkeitsfelder %></span></p>
+                    </div>
+                    <div class="button-container col-6">
+                        <a href=<%="/employees/" + matchedUsers._id %> class="btn">Zum Profil</a>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> <div class="row pagination-centered matches align-items-center">
+                    <div class="match-container col-6 text-center">
+                        <p class="card-title"><span>Einzigartige Kennung </span><span class="font-weight-bold">lserdU</span></p>
+                        <p class="card-text"><span>Tätigkeitsfelder: </span><span class="font-weight-bold tat">Kundenberatung</span></p>
+                    </div>
+                    <div class="button-container col-6">
+                        <a href="#" class="btn">Zeit: 21:55</a>
+                    </div>
+                </div></div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row pagination-centered matches align-items-center">
+                    <div class="match-container col-6 text-center">
+                        <p class="card-title"><span>Einzigartige Kennung </span><span class="font-weight-bold">mRtsxs</span></p>
+                        <p class="card-text"><span>Tätigkeitsfelder: </span><span class="font-weight-bold tat">Kundenberatung</span></p>
+                    </div>
+                    <div class="button-container col-6">
+                        <a href="#" class="btn">Zu dem Ergebnis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

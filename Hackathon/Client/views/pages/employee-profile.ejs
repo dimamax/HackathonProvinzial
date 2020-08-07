@@ -1,0 +1,87 @@
+<!-- views/pages/employee-profile.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meine Berwebung</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/matching.css">
+    <script type="text/javascript" src="/public/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/public/js/matching.js"></script>
+</head>
+<body>
+<div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <% include ../partials/nav-mobile %>
+
+    <div class="container body-mobile">
+        <div class="matching">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="font-weight-bold">Qualifikation: </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><%=user.qualifikationen.schulabschluss %></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><%=user.qualifikationen.studium %></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><%=user.qualifikationen.fortbildung %></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="font-weight-bold">Know-How:</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <% user.knowhow.forEach(function(knowhow) { %>
+                                    <span class="badge badge-java"><%=knowhow %></span>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="font-weight-bold">Tätigkeitsfelder:</div>
+                            </div>
+                            <% user.tätigkeitsfelder.forEach(function(feld) { %>
+                            <div class="row">
+                                <div class="col"><%=feld %></div>
+                            </div>
+                            <% }); %>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="font-weight-bold">Repräsentation:</div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><%=user.repräsentation%></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--<div class="card-body">
+                    <a href="#" class="card-link">Ablehnen</a>
+                    <a href="#" class="card-link">Annehmen</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
